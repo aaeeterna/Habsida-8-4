@@ -1,0 +1,160 @@
+@font-face {
+
+font-family: "TTLakes";
+
+src: url(./assets/fonts/TTLakes/TTLakes-Regular.woff),
+
+url(./assets/fonts/TTLakes/TTLakes-Black.woff)
+
+}
+
+
+body {
+    font-family: "TTLakes", sans-serif;
+
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+}
+
+main {
+  background-color: #f8f8f8;
+}
+
+/* .header { 
+  background: linear-gradient(
+    90deg,
+    #f8f8f8 0%,
+    #FFFFFF 100%
+  );
+} */
+
+.swiper-slide {
+    width: 240px;
+}
+
+.swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #dddddd !important;
+    opacity: 1;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background-color: #b8b6bc !important;
+}
+
+
+.swiper {
+    margin: 24px;
+    padding-bottom: 30px;
+}
+.swiper-pagination {
+  bottom: 0px !important;
+}
+
+h1 {
+    font-family: "TTLakes", sans-serif;
+    margin: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #7E7E82;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+
+    border: solid 1px #EAEAEA;
+    border-radius: 6px;
+}
+
+a {
+    display: block;
+}
+
+.show-more {
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  margin: 24px;
+  background: none;
+  border: none;
+
+  
+}
+
+.show-more {
+  font-family: "TTLakes" sans-serif;
+  font-size: 16px;
+  color: #1B1C21;
+}
+
+.show-more .arrow {
+
+  transform: rotate(45de);
+  transition: transform 0.3 ease;
+}
+
+.show-more.active .arrow {
+
+  transform: rotate(-180deg);
+
+}
+
+@media (min-width:320px) {
+
+  .show-more {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .swiper {
+    margin: 24px;
+    padding-bottom: 0;
+  }
+
+  .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .swiper-slide {
+    width: 100% !important;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .collapsed .swiper-slide:nth-child(n+7) {
+    display: none;
+  }
+
+  .show-more {
+    display: flex;
+  }
+
+}
+
+@media (min-width: 1120px) {
+
+  .swiper-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .show-more {
+    display: flex;
+  }
+
+}
