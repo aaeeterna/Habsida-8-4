@@ -31,7 +31,8 @@ main {
 } */
 
 .swiper-slide {
-    width: 240px;
+    max-width: 240px;
+    background-color: #FFFFFF;
 }
 
 .swiper .swiper-pagination-bullet {
@@ -127,10 +128,11 @@ a {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+    max-width: 768px !important;
   }
 
   .swiper-slide {
-    width: 100% !important;
+    max-width: 224px !important;
   }
 
   .swiper-pagination {
@@ -151,10 +153,17 @@ a {
 
   .swiper-wrapper {
     grid-template-columns: repeat(4, 1fr);
+
+    max-width: 1120px !important;
   }
 
   .show-more {
     display: flex;
   }
 
+  .swiper-slide {
+    max-width: 224px !important;
+  }
+
+  
 }

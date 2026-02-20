@@ -1,21 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper(".mySwiper", {
+  let swiper = null;
+
+  function handleSwiper() {
+    const isMobile = window.innerWidth <= 767;
+    if (isMobile && !swiper) {
+  // Initialize
+  swiper = new Swiper(".mySwiper", {
     slidesPerView: 1.2,
     spaceBetween: 16,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      }
-    }
   });
+} else if (!isMobile && swiper) {
+  // Destroy
+  swiper.destroy(true, true);
+  swiper = null;
+}
+}
+
+  handleSwiper(); // run on load
+  window.addEventListener("resize", handleSwiper);
 });
+
 
 
 const wrapper = document.querySelector(".swiper-wrapper");
